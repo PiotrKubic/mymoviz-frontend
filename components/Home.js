@@ -6,6 +6,8 @@ import Movie from "./Movie";
 import "antd/dist/antd.css";
 import styles from "../styles/Home.module.css";
 
+backend_URL = "https://mymoviz-backend-7gq8.vercel.app";
+
 function Home() {
   const [likedMovies, setLikedMovies] = useState([]);
   const [moviesData, setMoviesData] = useState([]);
@@ -13,7 +15,7 @@ function Home() {
   // Get movies data
   useEffect(() => {
     async function fetchMoviesData() {
-      const moviesDataResponse = await fetch("http://localhost:3000/movies");
+      const moviesDataResponse = await fetch(`${backend_URL}/movies`);
       const TMDBBaseImgURL = "http://image.tmdb.org/t/p/";
       const posterSize = "w500/";
       let moviesDataformated = await moviesDataResponse.json();
