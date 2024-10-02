@@ -6,7 +6,7 @@ import Movie from "./Movie";
 import "antd/dist/antd.css";
 import styles from "../styles/Home.module.css";
 
-backend_URL = "https://mymoviz-backend-7gq8.vercel.app";
+const backend_URL = "https://mymoviz-backend-7gq8.vercel.app";
 
 function Home() {
   const [likedMovies, setLikedMovies] = useState([]);
